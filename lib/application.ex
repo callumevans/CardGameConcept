@@ -1,11 +1,11 @@
 defmodule CardGameConcept.Application do
-    use Application, CardStack
+    use Application, CardCollection
 
     def start(type, args) do
         import Supervisor.Spec
 
         children = [
-            supervisor(CardStack, []),
+            supervisor(CardCollection, []),
             supervisor(CardGameConceptWeb.Endpoint, [])
         ]
 
